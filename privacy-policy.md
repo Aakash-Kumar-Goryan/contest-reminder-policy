@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy - Contest Reminder – Coding Competition Alerts
-last_updated: 2025-11-26
+last_updated: 2025-11-29
 ---
 
 # Privacy Policy
@@ -11,36 +11,45 @@ Contest Reminder – Coding Competition Alerts ("the extension") is designed to 
 
 ## 1. Information We Collect
 
-This extension does **not collect, store, or share any personally identifiable information.**
+### 1.1. Personal Information
+With the introduction of Premium features and Calendar integration in version 2.0, the extension now interacts with your Google account in the following limited ways:
 
-The extension may store the following **only on your device**:
+- **Email Address**: We access your email address via Google Sign-In solely to verify your identity and determine your subscription tier (Free, Pro, or Premium).
+- **Calendar Data**: We access your Google Calendar to add, update, or remove contest reminders that you explicitly choose to sync.
 
+**We do not sell, trade, or share your email address or calendar data with third parties.**
+
+### 1.2. Local Data
+The extension stores the following preferences **only on your device**:
 - Selected platforms (e.g., Codeforces, LeetCode, CodeChef, etc.)
 - Notification preferences
 - Theme settings (dark/light mode)
-
-This information is stored locally and never transmitted to any external server.
+- Sync settings (e.g., last sync time)
 
 ---
 
 ## 2. Permissions and Usage
 
-The extension may request the following Chrome permissions solely to support its core functionality:
+The extension requests the following permissions to support its functionality:
 
 | Permission | Purpose |
 |-----------|---------|
 | `notifications` | To send reminders shortly before contests begin. |
-| `alarms` | To schedule contest reminders at appropriate times. |
-| `storage` | To save user preferences locally (such as selected platforms and theme mode). |
+| `alarms` | To schedule contest reminders and background sync tasks. |
+| `storage` | To save user preferences locally. |
+| `identity` | To authenticate you with Google for Calendar integration and Premium features. |
 
-No permission is used for tracking, advertising, or analytics.
+### 2.1. Google API Scopes
+We request specific scopes to interact with Google services:
+- `https://www.googleapis.com/auth/calendar.events`: To create and manage contest events on your calendar.
+- `https://www.googleapis.com/auth/userinfo.email`: To identify your account for subscription management.
 
 ---
 
 ## 3. Remote Data Retrieval
 
-The extension may retrieve publicly available contest schedule data from competitive programming platforms.  
-This data is used only for display and reminder functionality and **is not stored or processed externally**.
+- **Contest Data**: The extension retrieves publicly available contest schedule data from competitive programming platforms.
+- **Google APIs**: The extension communicates directly with Google's servers to sync your calendar and verify your account.
 
 No remote executable code is ever loaded or run.
 
@@ -49,13 +58,11 @@ No remote executable code is ever loaded or run.
 ## 4. Data Sharing and Third Parties
 
 We do **not:**
+- Sell user data.
+- Use third-party analytics.
+- Track user behavior across the web.
 
-- Collect personal information  
-- Track user behavior  
-- Share or sell user data  
-- Use third-party analytics  
-
-The extension operates entirely on the user’s device.
+Data is only shared with **Google** as strictly necessary to fulfill the Calendar sync and Authentication features you request.
 
 ---
 
@@ -81,8 +88,8 @@ Email: dev.aakash.tools@gmail.com
 
 ### Summary
 
-- We do not collect personal data.  
-- Your preferences remain on your device.  
-- Permissions are used only to support the reminder functionality.
+- We use your email only for account verification.
+- We access your calendar only to add contests you want.
+- Your preferences remain on your device.
 
 Thank you for using Contest Reminder.
